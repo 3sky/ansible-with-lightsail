@@ -24,7 +24,7 @@ stage_numer_1:
   variables:
     AWS_KEY_ID: $AWS_ID
     AWS_ACCESS_KEY: $AWS_KEY
-    ENV_TAG: hublock-php-prod
+    ENV_TAG: php-prod-group
   stage: deploy
   before_script:
     - apt update
