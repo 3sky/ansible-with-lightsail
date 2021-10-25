@@ -1,0 +1,12 @@
+---
+- name: Deploy on AWS
+  become: true
+  hosts: lightsail_group
+  serial: 2
+  gather_facts: False
+
+  tasks:
+  - name: Run deploy script
+    ansible.builtin.shell: "bash deploy.sh"
+    args:
+      chdir: /home/ubuntu/app/bin
