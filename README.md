@@ -34,7 +34,7 @@ stage_numer_1:
     - apt-get update && apt-get install -y ssh python3 python3-pip
     - pip3 install boto3 ansible
   script:
-    - echo "Deploying to dev environment"
-    - ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ansible/lightsail.py ansible/playbook.yaml
+    - echo "Deploying to environment"
+    - ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i lightsail.py playbook.yaml
     - echo "Deploy to test was successful"
 ```
